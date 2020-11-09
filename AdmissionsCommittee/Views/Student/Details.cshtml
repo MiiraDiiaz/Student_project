@@ -1,0 +1,71 @@
+﻿@model AdmissionsCommittee.ViewModels.ProfileViewModel
+
+<div class="d-flex flex-row">
+    <div class="p-2">
+        <h4>Мои основные данные</h4>
+
+        <div>
+            <label asp-for="Name"></label><span>&nbsp;*</span><br />
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="Surname"></label>
+            <input asp-for="Surname" />
+        </div>
+
+        <div>
+            <label asp-for="Patronymic"></label>
+            <input asp-for="Patronymic" />
+        </div>
+
+        <div>
+            <label asp-for="Gender"></label>
+            <input asp-for="Gender" />
+        </div>
+
+        <div>
+            <label asp-for="BirthDay"></label>
+            <input asp-for="BirthDay" />
+        </div>
+
+    </div>
+
+    <!--Данные документов-->
+    <div class="p-2">
+        <h4>Мои данные по документу</h4>
+        <div>
+            <label asp-for="TypeDocument"></label>
+            <input asp-for="TypeDocument" />
+        </div>
+
+        <div>
+            <label asp-for="SeriesNamberDocument"></label>
+            <input asp-for="SeriesNamberDocument" />
+        </div>
+
+        <div>
+            <label asp-for="DateIssuanceDicument"></label>
+            <input asp-for="DateIssuanceDicument" />
+        </div>
+
+        <div>
+            <label asp-for="IssuanceOffice "></label>
+            <input asp-for="IssuanceOffice " />
+        </div>
+
+        <div>
+            <label asp-for="BirthPlace "></label>
+            <input asp-for="BirthPlace " />
+        </div>
+
+        <div>
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone" />
+        </div>
+        <div>
+            <a  asp-controller="Student" asp-action="Edit" asp-route-id="@Model.UserId">Изменить</a>
+        </div>
+    </div>
+
+</div>

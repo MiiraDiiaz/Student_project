@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AdmissionsCommittee.Models
+{
+    public class UserDocumentFile
+    {
+        public int Id { get; set; }
+        public byte[] IdentityDocument { get; set; }
+        public byte[] Photo { get; set; }
+
+        public string UserId { get; set; }
+        public User User { get; set; }
+    }
+}

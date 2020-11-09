@@ -1,0 +1,68 @@
+﻿@section Scripts{
+    <script type="text/javascript" src="/js/LoadPage.js"></script>
+}
+@model AdmissionsCommittee.ViewModels.ProfileViewModel
+@using Microsoft.AspNetCore.Identity
+<!--Местоположение текущей страницы-->
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    Главная страница
+                </a>
+            </li>
+            <li aria-current="page" class="breadcrumb-item active">
+                Личный кабинет
+            </li>
+        </ol>
+    </nav>
+</div>
+
+<!---->
+<div class="d-flex">
+    <!--main container-->
+    <div class="p-3">
+
+        <!--<div class="mh-180">
+        <div class="center">
+            foreach (var p in Model)
+            {
+                <div>
+                    if (p.Photo != null)
+                    {
+                        <img style='width:200px; height:300px;' src="data:image/jpeg;base64,(Convert.ToBase64String(p.Photo))" />
+                    }
+                </div>
+            }
+        </div>
+    </div>-->
+
+        <div class="d-flex align-items-start flex-column bd-highlight mb-3">
+            <div class="p-2 ">
+                @if (Model.UserDocumetsId != null && Model.UserId != null)
+                {
+                <a class="transition" href="~/Student/Details">Основные данные</a>
+                }
+                else
+                {
+                <a class="transition" href="~/Student/Profile">Основные данные</a>
+                }
+            </div>
+            <div class="p-2">
+                <a class=" transition" href="~/Student/Document" >Мои документы</a>
+            </div>
+            <div class="p-2">
+                <a>Сообщения</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Info student container-->
+    <div id="Content" class="p-2">
+
+
+    </div>
+
+</div>
+

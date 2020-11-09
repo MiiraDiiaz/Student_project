@@ -1,0 +1,90 @@
+﻿@model AdmissionsCommittee.ViewModels.ProfileViewModel
+
+<h1>Мой профиль</h1>
+<form class="d-flex flex-row" method="post" asp-controller="Student" asp-action="Edit" asp-route-id="@Model.UserId">
+    <!--Основные данные-->
+    <div class="p-2">
+        <h4>Введите основные данные</h4>
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Name"></label><span>&nbsp;*</span><br />
+            <input asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label asp-for="Surname"></label><span>&nbsp;*</span><br />
+            <input asp-for="Surname" />
+            <span asp-validation-for="Surname"></span>
+        </div>
+
+        <div>
+            <label asp-for="Patronymic"></label><span>&nbsp;*</span><br />
+            <input asp-for="Patronymic" />
+            <span asp-validation-for="Patronymic"></span>
+        </div>
+
+        <div>
+            <label asp-for="Gender"></label><span>&nbsp;*</span><br />
+            <input type="radio" value="Мужской" asp-for="Gender" />Мужской
+            <input type="radio" value="Женский" asp-for="Gender" />Женский
+            <span asp-validation-for="Gender"></span>
+        </div>
+
+        <div>
+            <label asp-for="BirthDay"></label><span>&nbsp;*</span><br />
+            <input type="date" name="bithday" asp-for="BirthDay" />
+            <span asp-validation-for="BirthDay"></span>
+        </div>
+
+    </div>
+
+    <!--Данные документов-->
+    <div class="p-2">
+        <h4>Введите данные документов</h4>
+        <div>
+            <label asp-for="TypeDocument"></label><span>&nbsp;*</span><br />
+            <select name="typeDocument" asp-for="TypeDocument">
+                <option value="Военный билет">Военный билет</option>
+                <option value="Паспорт РФ">Паспорт РФ</option>
+                <option value="Справка об обмене паспорта">Справка об обмене паспорта</option>
+                <option value="Временное удостоверение личности">Временное удостоверение личности</option>
+            </select>
+            <span asp-validation-for="TypeDocument"></span>
+        </div>
+
+        <div>
+            <label asp-for="SeriesNamberDocument"></label><span>&nbsp;*</span><br />
+            <input asp-for="SeriesNamberDocument" />
+            <span asp-validation-for="SeriesNamberDocument"></span>
+        </div>
+
+        <div>
+            <label asp-for="DateIssuanceDicument"></label><span>&nbsp;*</span><br />
+            <input type="date" name="bithday" asp-for="DateIssuanceDicument" />
+            <span asp-validation-for="DateIssuanceDicument"></span>
+        </div>
+
+        <div>
+            <label asp-for="IssuanceOffice "></label><span>&nbsp;*</span><br />
+            <input asp-for="IssuanceOffice " />
+            <span asp-validation-for="IssuanceOffice"></span>
+        </div>
+
+        <div>
+            <label asp-for="BirthPlace "></label><span>&nbsp;*</span><br />
+            <input asp-for="BirthPlace " />
+            <span asp-validation-for="BirthPlace"></span>
+        </div>
+
+        <div>
+            <label asp-for="Phone"></label><span>&nbsp;*</span><br />
+            <input asp-for="Phone" />
+            <span asp-validation-for="Phone"></span>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Сохранить данные" />
+    </div>
+
+</form>

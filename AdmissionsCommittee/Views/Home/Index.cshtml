@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h1 class="gray">Веб-приложение «Приемная комиссия»</h1>
+    <p class="lead">
+        Позволяет организовать удаленную регистрацию абитуриентов, в том числе и online подачу заявлений для абитуриентов.
+    </p>
+</div>
+
+<section class="section-padding" id="feature-page">
+    <div class="container">
+        <div class="row">
+            <!--Container 1-->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a class="box box_block" asp-area="" asp-controller="Account" asp-action="Register">
+                    <span>
+                        <img class="img-fluid" src="/images/register.png" >
+                    </span>
+                    <span class="box__title" >Онлайн-регистрация</span>
+                    <span class="box__intro">Электронная подача заявления абитуриента</span>
+                </a>
+            </div>
+            <!--Container 2-->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="box box_block">
+                    <span>
+                        <a href="login">
+                        <img class="img-fluid" src="/images/blog_private.png"></a>
+                    </span>
+                    <a class="box__title" href="login">Личный кабинет</a>
+                    <span class="box__intro">Если у Вас нет личного кабинета, <u><a class="dec-underline" asp-area="" asp-controller="Account" asp-action="Register">зарегистрируйтесь</a></u></span>
+                </div>
+            </div>
+            <!--Container 3-->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <address class="side-icon-boxes side-icon-boxes_dark">
+                    <div class="side-icon-box">
+                        <div class="side-icon">
+                            <img class="img-fluid" src="/images/blog_phone.png" alt="">
+                        </div>
+                        <p>
+                            <strong>Телефоны: </strong>
+                            <a href="callto:898566667777">898566667777</a> <br>
+                        </p>
+                    </div>
+                    <div class="side-icon-box">
+                        <div class="side-icon">
+                            <img class="img-fluid" src="/images/blog_email.png" alt="">
+                        </div>
+                        <p>
+                            <strong>E-mail: </strong>
+                            <a href="mailto:miiradiiaz@gmail.com">miiradiiaz@gmail.com</a> <br>
+                        </p>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </div>
+</section>
